@@ -42,7 +42,7 @@ void showCustomDialog(BuildContext context, {required ValueChanged onValue}) {
                   child: Column(
                     children: const [
                       Text(
-                        "Choose Custom sounds number[1-7]",
+                        "Choose Custom \nsound numbers [1-7]",
                         style: TextStyle(
                           fontSize: 24,
                           fontFamily: "Poppins",
@@ -53,7 +53,7 @@ void showCustomDialog(BuildContext context, {required ValueChanged onValue}) {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 16),
                         child: Text(
-                          "Access to 240+ hours of content. Learn design and code, by building real apps with Flutter and Swift.",
+                          "",
                           textAlign: TextAlign.center,
                         ),
                       ),

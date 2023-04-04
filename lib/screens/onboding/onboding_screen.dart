@@ -92,31 +92,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         AnimatedBtn(
-                          title: "Create Custom",
-                          btnAnimationController: _btnAnimationController,
-                          press: () {
-                            _btnAnimationController.isActive = true;
-
-                            Future.delayed(
-                              const Duration(milliseconds: 800),
-                              () {
-                                setState(() {
-                                  isShowSignInDialog = true;
-                                });
-                                showCustomDialog(
-                                  context,
-                                  onValue: (_) {
-                                    setState(() {
-                                      isShowSignInDialog = false;
-                                    });
-                                  },
-                                );
-                              },
-                            );
-                          },
-                        ),
-                        AnimatedBtn(
-                          title: "goto Piano",
+                          title: "Create a Custom",
                           btnAnimationController: _btnAnimationController,
                           press: () {
                             _btnAnimationController.isActive = true;
