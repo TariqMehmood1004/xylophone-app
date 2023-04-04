@@ -14,7 +14,7 @@ class Course {
 
 final List<Course> courses = [
   Course(
-    title: "Web Development Course",
+    title: "Mobile Application Development",
   ),
   Course(
     title: "Animations in Flutter",

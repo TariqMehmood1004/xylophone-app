@@ -1,9 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
+import 'package:rive_animation/screens/entryPoint/entry_point.dart';
 
 import 'components/animated_btn.dart';
-import 'components/sign_in_dialog.dart';
 
 class OnbodingScreen extends StatefulWidget {
   const OnbodingScreen({super.key});
@@ -95,24 +95,28 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                           title: "Create a Custom",
                           btnAnimationController: _btnAnimationController,
                           press: () {
-                            _btnAnimationController.isActive = true;
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const EntryPoint()));
+                            // _btnAnimationController.isActive = true;
 
-                            Future.delayed(
-                              const Duration(milliseconds: 800),
-                              () {
-                                setState(() {
-                                  isShowSignInDialog = true;
-                                });
-                                showCustomDialog(
-                                  context,
-                                  onValue: (_) {
-                                    setState(() {
-                                      isShowSignInDialog = false;
-                                    });
-                                  },
-                                );
-                              },
-                            );
+                            // Future.delayed(
+                            //   const Duration(milliseconds: 800),
+                            //   () {
+                            //     setState(() {
+                            //       isShowSignInDialog = true;
+                            //     });
+                            //     showCustomDialog(
+                            //       context,
+                            //       onValue: (_) {
+                            //         setState(() {
+                            //           isShowSignInDialog = false;
+                            //         });
+                            //       },
+                            //     );
+                            //   },
+                            // );
                           },
                         ),
                       ],

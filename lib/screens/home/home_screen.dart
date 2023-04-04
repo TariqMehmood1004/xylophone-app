@@ -1,7 +1,5 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../model/course.dart';
 import 'components/course_card.dart';
 // import 'components/secondary_course_card.dart';
@@ -14,7 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  AudioCache audioCache = AudioCache();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +25,7 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Text(
-                  "Courses",
+                  "Melodies",
                   style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 ),
@@ -74,12 +71,32 @@ class _HomePageState extends State<HomePage> {
               //       ),
               //     )
               //     .toList(),
+
               const SizedBox(
-                height: 40,
+                height: 20,
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                margin: const EdgeInsets.symmetric(horizontal: 20.0),
+                height: 50,
+                decoration: const BoxDecoration(
+                  color: Colors.transparent,
+                ),
+                child: const Text(
+                  "Melodies",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               InkWell(
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
                 onTap: () {
-                  AudioCache().load('assets/music/note1.wav');
+                  debugPrint('tapped');
+                  // AudioCache().load('assets/music/note1.wav');
                 },
                 child: Container(
                   padding:

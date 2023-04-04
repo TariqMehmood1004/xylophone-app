@@ -38,8 +38,6 @@ dependencies:
   rive: ^0.9.1
   flutter_svg: ^1.1.6
   audioplayers: ^3.0.1
-  assets_audio_player: ^3.0.6
-  audioplayer: ^0.8.1
 
 dev_dependencies:
   flutter_test:

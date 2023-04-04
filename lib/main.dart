@@ -5,7 +5,7 @@ import 'package:rive_animation/screens/onboding/onboding_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.redAccent,
+    statusBarColor: Colors.transparent,
   ));
   runApp(const MyApp());
 }

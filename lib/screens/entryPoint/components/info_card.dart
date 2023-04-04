@@ -16,8 +16,8 @@ class InfoCard extends StatelessWidget {
       leading: const CircleAvatar(
         backgroundColor: Colors.white24,
         child: Icon(
-          CupertinoIcons.person,
           color: Colors.white,
+          CupertinoIcons.person,
         ),
       ),
       title: Text(
