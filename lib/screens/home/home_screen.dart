@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../model/course.dart';
@@ -12,6 +13,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void playSound(int soundNumber) {
+    final player = AudioCache();
+    player.play('assets/music/note$soundNumber.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,6 +102,7 @@ class _HomePageState extends State<HomePage> {
                 highlightColor: Colors.transparent,
                 onTap: () {
                   debugPrint('tapped');
+                  playSound(1);
                   // AudioCache().load('assets/music/note1.wav');
                 },
                 child: Container(
