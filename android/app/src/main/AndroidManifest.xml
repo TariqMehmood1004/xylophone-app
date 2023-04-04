@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.app">
+    package="com.example.rive_animation">
    <application
         android:label="Notio Xylo App"
         android:name="${applicationName}"
