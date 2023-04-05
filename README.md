@@ -51,7 +51,7 @@ The CustomController widget contains a ListView.builder that shows a list of MyW
 The widget also contains a FloatingActionButton that navigates the user back to the HomePage.
 Note that backgroundColorDark is a color variable defined somewhere in the code that is used as the background color for the FloatingActionButtons. Also, MyWidget is a custom widget class that is not included in this code snippet
 
-
+## Output
 
 
 
