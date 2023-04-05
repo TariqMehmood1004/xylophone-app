@@ -54,11 +54,12 @@ Note that backgroundColorDark is a color variable defined somewhere in the code 
 ## output
 <table>
   <tr>
-    <th>      
-
+    <th></th>
+  </tr>
+  <tr>
+    <td>      
 https://user-images.githubusercontent.com/116074810/230221999-62545aae-a028-428e-90ea-a4031cecaabb.mp4
-
-    </th>
+    </td>
   </tr>
  </table>
 
