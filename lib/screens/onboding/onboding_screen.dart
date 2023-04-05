@@ -99,7 +99,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => const EntryPoint()));
-                            // _btnAnimationController.isActive = true;
+                            _btnAnimationController.isActive = true;
 
                             // Future.delayed(
                             //   const Duration(milliseconds: 800),
