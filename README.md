@@ -1,6 +1,6 @@
 # Animated App with Rive and Flutter
 
-**Onboarding controller**
+##**Onboarding controller**
 This is a Flutter code for a screen that displays an onboarding animation and a call-to-action button to create a custom xylophone. Here's a brief breakdown of the code:
 The code defines a stateful widget OnbodingScreen that has a single required parameter key. It overrides the createState method to return a _OnbodingScreenState object.
 _OnbodingScreenState is the state object for the OnbodingScreen widget. It contains a RiveAnimationController object _btnAnimationController for controlling the animation of the call-to-action button, and a boolean flag isShowSignInDialog to track whether a sign-in dialog is currently displayed.
@@ -9,7 +9,7 @@ The build method returns a Scaffold widget that contains a Stack widget with sev
 When the button is pressed, it navigates to a new screen EntryPoint, and the _btnAnimationController is activated to play the animation.
 Note that some code is commented out, indicating that it might have been used for implementing a sign-in dialog but has been disabled.
 
-**Entry point controller**
+##**Entry point controller**
 This is a Flutter code for an app's entry point screen. The app has a sidebar menu that slides in and out from the left side of the screen when a button is pressed, and a main content area that transforms when the sidebar opens and closes. The main content area has a rounded rectangular shape, and its contents are displayed in a HomePage widget.
 
 The EntryPoint widget is a stateful widget that holds the app's state. It has a bool property isSideBarOpen that tracks whether the sidebar is open or not, and two objects selectedBottonNav and selectedSideMenu that represent the currently selected items in the bottom navigation and the sidebar menu, respectively. It also has an animation controller _animationController and two animation objects scalAnimation and animation that control the transformation of the main content area.
@@ -18,7 +18,7 @@ The initState method initializes the animation controller and the animations, wh
 
 The position and visibility of the sidebar and the main content area are controlled using the AnimatedPositioned and Transform widgets, which are animated using the animation controller and animations. The menu button is also animated using a Rive animation.
 
-**Piano Widget controller**
+##**Piano Widget controller**
 This code defines a widget called piano that returns an InkWell widget with a container that contains a row with some children. The widget takes three optional parameters: letter, color, and soundNumber.
 
 When the user taps on the InkWell, the playSound function is called with the soundNumber argument, and the 'tapped' message is printed to the console using the debugPrint function. The InkWell widget also has its splashColor and highlightColor properties set to Colors.transparent to remove any default splash and highlight colors.
