@@ -55,7 +55,7 @@ Note that backgroundColorDark is a color variable defined somewhere in the code 
 <table>
   <tr>
     <td>
-      <img src="" alt="output result"/>
+      <video src="https://github.com/TariqMehmood1004/xylophone-app/blob/main/output/output.mp4" ></video>
     </td>
   </tr>
  </table>
