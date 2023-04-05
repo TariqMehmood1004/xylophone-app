@@ -68,9 +68,9 @@ class _CustomControllerState extends State<CustomController> {
         ),
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.only(left: 25.0),
+        padding: const EdgeInsets.only(left: 20.0),
         child: Container(
-          width: 400,
+          width: 190,
           padding: const EdgeInsets.all(6.0),
           margin: const EdgeInsets.symmetric(horizontal: 20.0),
           decoration: BoxDecoration(
@@ -129,48 +129,6 @@ class _CustomControllerState extends State<CustomController> {
           ),
         ),
       ),
-      // floatingActionButton: Row(
-      //   mainAxisAlignment: MainAxisAlignment.end,
-      //   crossAxisAlignment: CrossAxisAlignment.center,
-      //   children: [
-      //     FloatingActionButton(
-      //       onPressed: () {
-      // setState(() {
-      //   Future.delayed(const Duration(milliseconds: 800), () {
-      //     Navigator.pushReplacement(
-      //         context,
-      //         MaterialPageRoute(
-      //             builder: (context) => const HomePage()));
-      //   });
-      // });
-      //       },
-      //       heroTag: "Back",
-      //       tooltip: 'Delete Dice',
-      //       child: const Icon(Icons.arrow_back_ios_new),
-      //     ),
-      //     const SizedBox(
-      //       width: 5,
-      //     ),
-      //     FloatingActionButton(
-      //       onPressed: _deleteDice,
-      //       heroTag: "Delete",
-      //       tooltip: 'Delete Dice',
-      //       child: const Icon(Icons.delete),
-      //     ),
-      //     const SizedBox(
-      //       width: 5,
-      //     ),
-      //     FloatingActionButton(
-      //       backgroundColor: Colors.black,
-      //       heroTag: "Add",
-      //       onPressed: _addDice,
-      //       tooltip: 'Add Dice',
-      //       child: const Icon(
-      //         Icons.add,
-      //       ),
-      //     ),
-      //   ],
-      // ),
     );
   }
 }

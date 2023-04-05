@@ -337,46 +337,32 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(left: 25.0),
         child: Container(
-          width: 400,
+          width: 60,
+          height: 60,
           padding: const EdgeInsets.all(6.0),
           margin: const EdgeInsets.symmetric(horizontal: 20.0),
           decoration: BoxDecoration(
             color: backgroundColorDark,
             borderRadius: BorderRadius.circular(20.0),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              FloatingActionButton(
-                backgroundColor: backgroundColorDark,
-                elevation: 0,
-                heroTag: "Delete",
-                onPressed: () {},
-                child: const Icon(
-                  Icons.delete,
-                  size: 18,
-                ),
-              ),
-              FloatingActionButton(
-                backgroundColor: backgroundColorDark,
-                elevation: 0,
-                onPressed: () {
-                  setState(() {
-                    Future.delayed(const Duration(milliseconds: 800), () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const CustomController()));
-                    });
-                  });
-                },
-                heroTag: "Add",
-                child: const Icon(
-                  Icons.add,
-                  size: 18,
-                ),
-              ),
-            ],
+          child: FloatingActionButton(
+            backgroundColor: backgroundColorDark,
+            elevation: 0,
+            heroTag: "Add",
+            onPressed: () {
+              setState(() {
+                Future.delayed(const Duration(milliseconds: 800), () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const CustomController()));
+                });
+              });
+            },
+            child: const Icon(
+              Icons.add,
+              size: 18,
+            ),
           ),
         ),
       ),
@@ -424,20 +410,14 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 40,
               child: VerticalDivider(
-                // thickness: 5,
                 color: Colors.white70,
               ),
             ),
             const SizedBox(width: 8),
-            // SvgPicture.asset("assets/icons/ios.svg"),
             const Icon(
               Icons.numbers,
               color: backgroundColorLight,
             ),
-            // Text(
-            //   soundNumber.toString(),
-            //   style: const TextStyle(color: Colors.white, fontSize: 14.0),
-            // ),
           ],
         ),
       ),
