@@ -54,13 +54,9 @@ Note that backgroundColorDark is a color variable defined somewhere in the code 
 ## output
 <table>
   <tr>
-    <td>      
-      <video width="400" controls>
-  <source src="[https://github.com/TariqMehmood1004/xylophone-app/blob/main/output/output.mp4](https://github.com/TariqMehmood1004/xylophone-app/blob/main/output/output.mp4)" type="video/mp4">
-  Your browser does not support HTML video.
-</video>
-      
-    </td>
+    <th>      
+      [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)      
+    </th>
   </tr>
  </table>
 
