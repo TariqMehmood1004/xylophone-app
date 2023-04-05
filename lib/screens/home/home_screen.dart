@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:rive_animation/constants.dart';
+import 'package:rive_animation/screens/home/components/custom_add_widget.dart';
 import '../../model/course.dart';
 import 'components/course_card.dart';
 // import 'components/secondary_course_card.dart';
@@ -361,7 +362,12 @@ class _HomePageState extends State<HomePage> {
                 elevation: 0,
                 onPressed: () {
                   setState(() {
-                    addWidget;
+                    Future.delayed(const Duration(milliseconds: 800), () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CustomController()));
+                    });
                   });
                 },
                 heroTag: "Add",
@@ -451,26 +457,29 @@ class _AddWidgetForXylophoneState extends State<AddWidgetForXylophone> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: SafeArea(
-          child: GestureDetector(
-            onTap: () {
-              AudioCache().play(
-                'music/note${Random().nextInt(7) + 1}.wav',
-              );
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                  width: 150,
-                  height: 150,
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: const Text('piano')),
-            ),
+      child: Container(
+        width: 350,
+        height: 50,
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+        child: GestureDetector(
+          onTap: () {
+            AudioCache().play(
+              'music/note${Random().nextInt(7) + 1}.wav',
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+                width: 150,
+                height: 150,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: const Text('piano')),
           ),
         ),
       ),
