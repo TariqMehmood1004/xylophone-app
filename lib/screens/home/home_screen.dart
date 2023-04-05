@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import '../../model/course.dart';
@@ -12,9 +14,85 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //
+  //
   void playSound(int soundNumber) {
     final player = AudioCache();
     player.play('music/note$soundNumber.wav');
+  }
+
+  //
+  //
+  //
+
+  List<String> letters = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+  ];
+
+  //
+  // random sounds
+  final List<String> _sounds = List.generate(
+    10,
+    // music/note$soundNumber.wav
+    (index) => 'music/note${Random().nextInt(7) + 1}.wav',
+  );
+
+  //
+  // random colors
+  final List<Color> _colors = List.generate(
+    10,
+    (index) =>
+        Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0),
+  );
+  Offset offset = Offset.zero;
+  //
+  //list widget() function
+  Widget listView() {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      padding: const EdgeInsets.all(4.0),
+      margin: const EdgeInsets.all(4.0),
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      child: ListView.builder(
+        itemCount: _sounds.length,
+        itemBuilder: (context, index) {
+          return Stack(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 60,
+                padding: const EdgeInsets.all(4.0),
+                margin: const EdgeInsets.all(4.0),
+                decoration: BoxDecoration(
+                    color: _colors[index],
+                    borderRadius: BorderRadius.circular(8.0)),
+                child: GestureDetector(
+                  onTap: () {
+                    // AudioPlayer audioPlayer = AudioPlayer();
+                    final audio = AudioCache();
+                    audio.play(_sounds[index]);
+                  },
+                  child: ListTile(
+                    title: Text('A'.toString().toUpperCase()),
+                    trailing: const Icon(Icons.music_note),
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
   }
 
   @override
@@ -31,7 +109,7 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Text(
-                  "Melodies",
+                  "Available Courses",
                   style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                       color: Colors.black, fontWeight: FontWeight.bold),
                 ),
@@ -96,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Container(
+              /*Container(
                 width: MediaQuery.of(context).size.width / 0.2,
                 decoration: BoxDecoration(
                   color: Colors.transparent,
@@ -130,7 +208,8 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-              )
+              )*/
+              listView(),
             ],
           ),
         ),
