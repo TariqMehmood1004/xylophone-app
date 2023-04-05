@@ -55,7 +55,9 @@ Note that backgroundColorDark is a color variable defined somewhere in the code 
 <table>
   <tr>
     <th>      
-      [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)      
+
+https://user-images.githubusercontent.com/116074810/230221999-62545aae-a028-428e-90ea-a4031cecaabb.mp4
+
     </th>
   </tr>
  </table>
