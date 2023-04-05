@@ -52,16 +52,7 @@ The widget also contains a FloatingActionButton that navigates the user back to 
 Note that backgroundColorDark is a color variable defined somewhere in the code that is used as the background color for the FloatingActionButtons. Also, MyWidget is a custom widget class that is not included in this code snippet
 
 ## output
-<table>
-  <tr>
-    <th></th>
-  </tr>
-  <tr>
-    <td>      
-https://user-images.githubusercontent.com/116074810/230221999-62545aae-a028-428e-90ea-a4031cecaabb.mp4
-    </td>
-  </tr>
- </table>
 
+https://user-images.githubusercontent.com/116074810/230221999-62545aae-a028-428e-90ea-a4031cecaabb.mp4
 
 
